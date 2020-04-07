@@ -3,7 +3,8 @@ def nyc_pigeon_organizer(data)
     value.each {|k, v| 
       v.each {|e| 
         memo[e] = memo[e] != nil ? memo[e] : {}
-        memo[e][key] = k.to_s
+        memo[e][key] = memo[e][key] != nil ? memo[e][key] : []
+        memo[e][key].app
       }
     }
     memo
